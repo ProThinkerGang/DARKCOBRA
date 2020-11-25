@@ -4,6 +4,7 @@ Syntax: .meaning <word>"""
 import requests
 from telethon import events
 from uniborg.util import admin_cmd
+from userbot import CMD_HELP
 
 
 @borg.on(admin_cmd("meaning (.*)"))
@@ -42,3 +43,11 @@ async def _(event):
     except:
         pass
     await event.edit(caption_str)
+    
+
+CMD_HELP.update(
+    {
+        "dictionary": ".menaing <your word>"
+        "\nUsage": "A Dictionary Plugin"
+    }
+)
