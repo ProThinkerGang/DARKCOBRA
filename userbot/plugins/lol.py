@@ -10,7 +10,7 @@ import os
 import sys
 import random
 from uniborg.util import admin_cmd
-
+from userbot import CMD_HELP
 
 
 @borg.on(admin_cmd(pattern=r"lol"))
@@ -83,3 +83,10 @@ async def _(event):
     if (x==28):
       await event.edit("llllllllllllllooooooooooollllllllll")
     
+
+CMD_HELP.update(
+    {
+        "lol": "..lol"
+        "\nUsage": "#Animation plugin"
+    }
+)
